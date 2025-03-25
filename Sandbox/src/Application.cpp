@@ -1,9 +1,18 @@
-namespace DreamBit {
+#include <DreamBit.h>
 
-	__declspec(dllimport) void Print();
-}
+class Sandbox : public DreamBit::Application
+{
+public:
+	Sandbox() {
 
+	
+	}
 
-void main() {
-	DreamBit::Print();
+	~Sandbox() {
+
+	}
+};
+
+DreamBit::Application* DreamBit::CreateApplication() {
+	return new Sandbox();
 }
